@@ -170,6 +170,7 @@
           <img width="100px" src="http://cdn4.raywenderlich.com/wp-content/uploads/2012/11/RWTutTeamLogo.jpg">
           <img width="100px" src="http://cdn4.raywenderlich.com/wp-content/uploads/2014/05/kr-icons.png">
           <img width="100px" src="https://d1lpkba4w1baqt.cloudfront.net/heroku-logo-dark-234x60.png">
+          <img width="100px" src="http://i.kinja-img.com/gawker-media/image/upload/s--S_KtdNR6--/c_fit,fl_progressive,q_80,w_636/19bcn2jhs74ncjpg.jpg" />
           <div>
             <img width="250px" src="http://socialtalent.co/wp-content/uploads/blog-content/so-logo.png">
             <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/nickotter/images/481708/GitHub_Logo.png" style="width: 212.602416880363px; height: 82.58117143251451px; max-height: none; max-width: none;">
@@ -187,18 +188,20 @@
           <br>
         </div>
         <div>
-          <pre><code>def sendText(to, from, message)
+          <pre><code>
+def sendText(to, from, message)
 
-            @client = Twilio::Rest::Client.new account_sid, auth_token
+  @client = Twilio::Rest::Client.new account_sid, auth_token
 
-            @client.account.messages.create(
-            :from =&gt; from,
-            <span style="font-family: monospace; font-size: 19.668737411499023px; font-style: normal; font-variant: normal;">        :to =&gt; to,</span></code><code><span style="font-family: monospace; font-size: 19.668737411499023px; font-style: normal; font-variant: normal;">        :body =&gt; message,</span>
-              )
+  @client.account.messages.create(
+    :from =&gt; from,
+    :to =&gt; to,
+    :body =&gt; message
+  )
 
-              end
+end
 
-              sendText("+15551234567", "+15555671234", "Happy Birthday!")</code>    </pre>
+sendText("+15551234567", "+15555671234", "Happy Birthday!")</code>    </pre>
             </div>
             <br>
           </section>
